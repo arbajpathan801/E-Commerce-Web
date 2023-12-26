@@ -1,0 +1,6 @@
+{
+    "notebook.codeActionsOnSave": {},
+    "editor.wordWrap": "on",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.defaultFormatter": "formulahendry.auto-close-tag"
+}
