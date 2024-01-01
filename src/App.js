@@ -1,40 +1,20 @@
-import React from 'react'
-import  { Button, ButtonGroup, Container, Navbar, NavbarBrand, Row,Col}  from 'react-bootstrap';
-import Counter from './Components/Counter';
-import Register from './Components/Register';
-import Userlist from './Components/Userlist';
-import Productlist from './Components/Productlist';
+import React, { useState } from "react";
+import Productlist from "./Components/Productlist";
+import Cart from "./Components/Cart";
+// import Rough from "./Overlay/Rough";
+import ProductState from "./ContextApis/ProductState";
+import Head from "./Components/Header/header";
 
-const App =() => {
-
-
+const App = () => {
   return (
-    <>
-      <Navbar expand='sm' bg='dark' >  
-        <ButtonGroup  className='mx-auto' size='lg' >
-          <Button variant='dark' href='#home' >Home </Button>
-          <Button variant='dark' href='#store' >Store </Button>
-          <Button variant='dark' href='#about'>About </Button>
-         
-        </ButtonGroup>
-        <Button variant='dark' size='md' href='#cart'>Cart </Button>
-  
-      </Navbar>
-      <Navbar expand='lg' bg='secondary' className='m-1 p-5' >
-        <Container >
-          <Row className='justify-content-md-center'></Row>
-          <Col md='auto' lg={8} >
-          <h1 className='text-white ' >The Generics</h1>
-          </Col>
-        
-        </Container>
-      </Navbar>
-      {/* justify-content- */}
+    <ProductState>
       {/* <Counter/> */}
       {/* <Register/> */}
       {/* <Userlist/> */}
-      <Productlist/>
-    </>
-  )
-} 
+      <Head></Head>
+      {/* <Productlist /> */}
+      {/* {show && <Cart hideCart={hideCart}/>} */}
+    </ProductState>
+  );
+};
 export default App;
